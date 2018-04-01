@@ -1,0 +1,96 @@
+﻿@model Your_Tunes.Models.Song
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-title">Song Details</h2>
+
+<div class="information-container row">
+    <div class="col-md-4">
+        <img src="~/Content/Images/Slim Shady EP.png" />
+    </div>
+    <div class="information col-md-8">
+        <div>
+            <h4 style="color:black; font-size:18pt">Song Information:</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Singer)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Singer)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Album)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Album)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.YearOfRelease)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.YearOfRelease)
+                </dd>
+                
+                <dt>
+                    @Html.DisplayNameFor(model => model.Category)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Category)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+
+               
+
+            </dl>
+        </div>
+
+        <div class="row">
+            @Html.ActionLink("Go Back", "Index")
+            <div class="action-buttons " style="display: inline-block; float:right">
+                <button class="btn icon-btn add-to-cart " >
+                   Add to Cart
+                    <a href="@Url.Action("Details", "Songs", new { id = Html.DisplayFor(model => model.Description)})">
+                        <span class="edit">
+                            <i class="fa fa-cart-plus" alt="Buy"></i>
+                        </span>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

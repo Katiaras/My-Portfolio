@@ -1,0 +1,106 @@
+﻿@model Your_Tunes.Models.ViewModel
+
+@{
+    ViewBag.Title = "Songs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-title">Songs</h2>
+
+<form action="/Songs" method="post" class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" id="SearchString" name="SearchString" value="" type="text" placeholder="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+<container class="container">
+    <div class="row">
+
+
+        <div class="col col-lg-2 col-md-2 col-sm-2">
+            <h1 style="color:black">Genres</h1>
+
+
+            <ul>
+                @foreach (var category in Model.Categories)
+                {
+                    if (category != null)
+                    {
+                        <li>
+                            @Html.ActionLink(category, "../Songs/Index", new { SearchString = category })
+                        </li>
+                    }
+
+                }
+            </ul>
+        </div>
+        <div class="col col-lg-10 col-md-10 col-sm-10">
+            @if (Model.Songs.Count()== 0)
+            {
+                <h1>No result found.</h1>
+            }
+            @foreach (var item in Model.Songs)
+            {
+                <div class="song-container col-md-3 col-sm-5">
+                    <div class="img-container">
+                        <img src="~/Content/images/@(item.Singer).png" height="200px" />
+                        <div class="screen">
+                            <div class="details-container">
+                                <div class="album"><b>Album:</b> @Html.DisplayFor(modelItem => item.Album)</div>
+                                <div class="year"><b>Release Date:</b> @Html.DisplayFor(modelItem => item.YearOfRelease)</div>
+                                <div class="description"><b>Description:</b> @Html.DisplayFor(modelItem => item.TrimedDescription)</div>
+                                <div class="details btn learn-more-button">
+                                    <a href="@Url.Action("Details", "Songs", new { id = item.SongId })"> Learn More </a>
+                                </div>
+                                <div class="price-tag">
+                                    <img src="~/Content/Images/price-tag.png" />
+                                </div>
+                                <h3 class="price">
+                                    @Html.DisplayFor(modelItem => item.Price)
+                                <i class="fa fa-eur"></i>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="name-container">
+                    <div class="float-left">
+                        <div class="singer">@Html.DisplayFor(modelItem => item.Singer)</div>
+                        <div class="title">@Html.DisplayFor(modelItem => item.Title)</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn icon-btn" onclick="AddToShoppingList(@item.SongId)">
+                            <a href="">
+                                <span class="edit">
+                                    <i class="fa fa-cart-plus" alt="Buy"></i>
+                                </span>
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    <script>
+        function AddToShoppingList(id) {
+            //Load existing list, if exist
+            var shopping_list = [];
+            if (localStorage.getItem("shopping_list") != null) {
+                shopping_list = JSON.parse(localStorage.getItem("shopping_list"));
+            }
+            //if it doesn't exist in the list already
+            if (!(shopping_list.indexOf(id) > -1)) {
+                //Push the new id
+                shopping_list.push(id);
+                console.log(shopping_list)
+            }
+            else {
+                alert('Item you are trying to add already exist in your shopping list.')
+            }
+
+            // Update local storage
+            localStorage.setItem('shopping_list', JSON.stringify(shopping_list));
+
+            $('#cart-items').text(shopping_list.length);
+        }
+    </script>
+</container>

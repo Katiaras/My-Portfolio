@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AubgBank.Models.Client>
+
+@{
+
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="container container-general">
+    <h2 class="position">The Client list </h2>
+    <div class="clients-container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-sm-4 animate-box ">
+                    <div class="clients-feature">
+                        <a href="@Url.Action("Edit", "Clients", new { id = item.ID })">
+                            <span class="editclient">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <a href="@Url.Action("Delete", "Clients", new { id = item.ID })">
+                            <span class="deleteclient">
+                                <i class="fa fa-eraser" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <span class="gender">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        </span>
+
+                        <p>@Html.DisplayFor(modelItem => item.Firstname) @Html.DisplayFor(modelItem => item.Lastname)</p>
+
+                        <p>
+                            <span class="btn custom-button">
+                                @Html.ActionLink("Learn More", "Details", new { id = item.ID })
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <p>
+        <a class="add" href="@Url.Action("Create", "Clients")">
+            <span class="general-icon">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </span>
+        </a>
+    </p>
+</div>

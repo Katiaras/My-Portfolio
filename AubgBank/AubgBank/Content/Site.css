@@ -1,0 +1,362 @@
+﻿html {
+    height:auto;
+}
+body {
+    font-family: "Raleway", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #828282;
+    padding-bottom: 20px;
+    background-image: url("../img/pattern.png");
+    background-repeat: repeat;
+}
+#services {
+    background: white;
+}
+footer p {
+    color:white;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*Custom CSS*/
+/*Services*/
+.container-general{
+    margin-top: 70px;
+    background: white;
+    border: solid 2px black;
+    border-radius: 15px;
+    position: relative;
+}
+.clear {
+    clear: both;
+}
+.services-container {
+    max-width: 1140px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #fff;
+}
+
+.feature-center {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    transition: all .4s ease-in-out;
+    border-radius: 28px;
+}
+.feature-center:hover {
+    background: #ede9e3;
+}
+.feature-center:hover .edit i, .feature-center:hover .delete i {
+    color: #F85A16;
+}
+::-moz-selection {
+    color: #fff;
+    background: #F85A16;
+}
+.feature-center .icon {
+    width: 90px;
+    height: 90px;
+    background: #efefef;
+    display: table;
+    text-align: center;
+    margin: 0 auto 30px auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.feature-center .icon i {
+    display: table-cell;
+    vertical-align: middle;
+    height: 90px;
+    font-size: 40px;
+    line-height: 40px;
+    color: #F85A16;
+}
+.feature-center .edit i, .feature-center .delete i {
+    color: transparent;
+}
+.delete i {
+    position: absolute;
+    right: 34px;
+    font-size: 34px;
+    color: #F85A16;
+    transition: all .6s ease-in-out;
+    cursor: pointer;
+}
+
+.delete:hover i {
+    font-size: 42px;
+}
+.edit:hover i {
+    font-size: 42px;
+}
+.edit i {
+    position: absolute;
+    left: 34px;
+    font-size: 34px;
+     color: #F85A16;
+    transition: all .6s ease-in-out;
+    cursor: pointer;
+}
+#back-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.btn-primary.btn-outline {
+    background: transparent;
+    color: #F85A16;
+    border: 2px solid #F85A16;
+}
+.btn-primary.btn-outline:hover {
+    background: #F85A16;
+    color: #fff;
+ }
+.btn-primary.btn-outline a {
+    color: #F85A16;
+    text-decoration: none;
+}
+
+.btn-primary.btn-outline:hover a {
+    background: #F85A16;
+    color: #fff;
+}
+
+.custom-button {
+    background: transparent;
+    color: #F85A16;
+    border: 2px solid #F85A16;
+}
+
+    .custom-button:hover {
+        background: #F85A16;
+        color: #fff;
+    }
+
+    .custom-button a {
+        color: #F85A16;
+        text-decoration: none;
+    }
+
+    .custom-button:hover a {
+        background: #F85A16;
+        color: #fff;
+    }
+/*Details Page*/
+.feature-details {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.feature-details .icon {
+    float: left;
+    margin-right: 5%;
+    display: table;
+    text-align: center;
+}
+
+.feature-details .feature-copy {
+    float: left;
+    width: 80%; 
+}
+.feature-details .feature-copy h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #5d5d5d;
+    margin: 0 0 20px 0;
+    margin-bottom: 10px;
+    }
+.feature-details .icon i {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 30px;
+    color: #F85A16;
+}
+
+.gtco-heading h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #000;
+}
+
+/*General*/
+.general-icon i {
+    left: 34px;
+    font-size: 34px;
+    color: #F85A16;
+    transition: all .4s linear;
+    cursor: pointer;
+    margin: 11px;
+}
+.general-icon:hover i {
+    font-size: 42px;
+}
+.rotate:hover .general-icon {
+    transform: rotate(90deg);
+}
+#mainNav {
+    background-color: rgba(3, 3, 3, 0.8);
+}
+
+/* FORM CONTROL FOR EDIT-CREATE-DELETE*/
+.form-control:active, .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #F85A16;
+}
+
+.form-group label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    box-shadow: none;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    height: 54px;
+    font-size: 18px;
+    font-weight: 300;
+}
+textarea {
+    max-width: 100%;
+}
+
+
+/*General FOnt*/
+.highlighted-black {
+    font-size: 36px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+
+/*CLIENTS*/
+
+.clients-container {
+    max-width: 1140px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #fff;
+}
+
+.clients-feature {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    border: 1px solid rgba(44,62,80,0.3);
+    border-radius: 10px;
+}
+
+    .clients-feature .gender i {
+        display: table-cell;
+        vertical-align: middle;
+        height: 90px;
+        font-size: 60px;
+        line-height: 40px;
+        color: #F85A16;
+    }
+
+.editclient, .deleteclient {
+    transition: all 0.3s ease-out;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 25px;
+    color: rgb(44, 62, 80);
+}
+
+.deleteclient {
+    top: 40px;
+}
+
+    .editclient:hover, .deleteclient:hover {
+        color: #F85A16;
+    }
+
+.btn-primary.btn-outline {
+    color: rgb(44, 62, 80);
+    border: 1px solid rgb(44, 62, 80);
+    background-color: transparent;
+}
+
+    .btn-primary.btn-outline a {
+        color: rgb(44, 62, 80);
+    }
+
+    .btn-primary.btn-outline:hover {
+        border: 1px solid #F85A16;
+    }
+
+        .btn-primary.btn-outline:hover a {
+            color: #F85A16;
+        }
+
+.client-details h3 {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+h2.position {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.positioning {
+    margin-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.form-actions {
+    margin-left: 16px;
+    margin-bottom: 15px;
+}
+.add {
+    font-size: 25px;
+    color: rgb(44, 62, 80);
+}

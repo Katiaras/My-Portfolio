@@ -1,0 +1,50 @@
+﻿@model IEnumerable<AubgBank.Models.Service>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="container container-general">
+    <h2 class="highlighted-black">Services</h2>
+
+    <p>
+        <a class="rotate" href="@Url.Action("Create", "Services")">
+            <span class="general-icon">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </span>
+        </a>
+    </p>
+    <div class="services-container">
+        <div class="row">
+@foreach (var item in Model)
+{
+            <div class="col-md-4 col-sm-4 animate-box " >
+                <div class="feature-center">
+                    <a href="@Url.Action("Edit", "Services", new { id = item.ServiceID })" >
+                        <span class="edit">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a href="@Url.Action("Delete", "Services", new { id = item.ServiceID })">
+                        <span class="delete">
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <span class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </span>
+                    <h3>@Html.DisplayFor(modelItem => item.LoanServiceName)</h3>
+                    <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                    <p>
+                        <span class="btn custom-button">
+                            @Html.ActionLink("Learn More", "Details", new { id = item.ServiceID })
+                        </span>
+                    </p>
+                </div>
+            </div>
+}
+        </div>
+    </div>
+</div>

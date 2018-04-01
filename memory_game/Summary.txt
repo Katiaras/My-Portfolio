@@ -1,0 +1,17 @@
+This is a React Memory Game Website. 
+
+The aim of the project was to create an interactive game, using React, javascript and 
+HTML. 
+
+Rules: Clickin on two cards, and trying to guess the same ones. 
+If Guessed correctly, the cards dissapear. 
+
+3 difficulties exist: Easy (4 cards), Medium (8 cards), Hard (16 cards).
+
+Time limit: 60 seconds. 
+ 
+Technologies Used: ReactJS, Javascript, CSS, HTML. 
+
+*************** IN ORDER TO RUN type "npm start" in the console. *****************
+
+Author: Giouzakov Konstantinos

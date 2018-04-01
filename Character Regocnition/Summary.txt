@@ -1,0 +1,17 @@
+---------------Character Regocnition ----------------------
+
+Aim of is to create a library, with implementation, that could 
+be used for character recognition from images. 
+
+Technologies Used: Python, OpenCV (library), Numpy (library). 
+
+Guide-lines: the implementation takes part in two phases...
+1. Training - the machine on a dataset. (Supervised Machine Learning).
+The training result is stored in two file; one with the classification, and one with 
+the image representation of the character.  
+
+2. Testing - the machine learning on new dataset, an new image.
+
+The comparison code for the classification is KNN algorithm. 
+
+Autho: Giouzakov Konstantinos. 

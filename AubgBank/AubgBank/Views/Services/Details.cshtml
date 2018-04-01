@@ -1,0 +1,81 @@
+﻿@model AubgBank.Models.Service
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="gtco-section container container-general">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                <h2>@Html.DisplayFor(model => model.LoanServiceName)</h2>
+            </div>
+        </div>
+        <hr />
+        @if(false)
+        {
+            <h1>Hey, it's True!!!</h1>
+        }
+       
+        <div class="row">
+            <div class="col-md-6">
+                <div class="feature-details">
+                    <span class="icon">
+                        <i class="fa fa-eur" aria-hidden="true"></i>
+                    </span>
+                    <div class="feature-copy">
+                        <h3>@Html.DisplayNameFor(model => model.LoanLimit)</h3>
+                        <p>@Html.DisplayFor(model => model.LoanLimit)</p>
+                    </div>
+                </div>
+                <div class="feature-details">
+                    <span class="icon">
+                        <i class="fa fa-percent" aria-hidden="true"></i>
+                    </span>
+                    <div class="feature-copy">
+                        <h3>@Html.DisplayNameFor(model => model.InterestRate)</h3>
+                        <p>@Html.DisplayFor(model => model.InterestRate)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+
+                <div class="feature-details">
+                    <span class="icon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </span>
+                    <div class="feature-copy">
+                        <h3>@Html.DisplayNameFor(model => model.MaturityDate)</h3>
+                        <p>@Html.DisplayFor(model => model.MaturityDate)</p>
+                    </div>
+                </div>
+                <div class="feature-details" >
+                    <span class="icon">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </span>
+                    <div class="feature-copy">
+                        <h3>@Html.DisplayNameFor(model => model.Description)</h3>
+                        <p>@Html.DisplayFor(model => model.Description)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-menu">
+        <a href="@Url.Action("Edit", "Services", new { id = Model.ServiceID })" >
+            <span class="general-icon">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </span>
+        </a>
+        <a href="@Url.Action("Delete", "Services", new { id = Model.ServiceID })">
+            <span class="general-icon">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </span>
+        </a>
+        <a id="back-button" href="@Url.Action("Index", "Services")">
+            <span class="general-icon">
+                <i class="fa fa-undo" aria-hidden="true"></i>
+            </span>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,146 @@
+﻿@model IEnumerable<Your_Tunes.Models.Song>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (Model != null)
+{<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Album)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Singer)
+            </th>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+
+
+        </tr>
+
+        @foreach (var item in Model)
+
+        {
+
+            <tr>
+                <td>
+
+                    <img src="~/Content/images/@(item.Singer).png" alt="Image" width="60" height="60" />
+
+                    @Html.DisplayFor(modelItem => item.Title)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Singer)
+                </td>
+
+
+                <td class="price">
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+                <td class="check">
+                    <input type="checkbox" onclick="addToArray( @item.SongId, this)" autocomplete="off">
+                </td>
+                <td class="'delete">
+                    <button onclick="Delete()" class="btn btn-danger">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <button>
+        @Html.ActionLink("Check Out", "Checkout", "ShoppingCart")
+    </button>
+    <button value="Continue shopping">
+        @Html.ActionLink("Continue Shopping", "Index", "Songs")
+    </button>
+    <h3>Price: <span id="total"></span> <span class="glyphicon glyphicon-euro"></span></h3>
+    <h3> Tax (10%): <span id="tax"></span> <span class="glyphicon glyphicon-euro"></span></h3>
+    <h2> Total price : <span id="totalPrice"></span> <span class="glyphicon glyphicon-euro"></span></h2>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script>
+        var checked_elements = [];
+        $(document).ready(function () {
+            var total = 0;
+            var tax = 0;
+            var totalPrice = 0;
+
+            var id = [];
+
+            total_html = $('#total');
+            total_html.text(total);
+
+            tax_html = $('#tax');
+            tax_html.text(tax);
+
+            totalPrice_html = $('#totalPrice');
+            totalPrice_html.text(totalPrice);
+        
+            $('.check ').click(function () {
+                if ($(this).children().is(":checked")) {
+                    total += parseInt($(this).parent().children('.price')[0].innerText);
+                    
+                }
+                else {
+                    total -= parseInt($(this).parent().children('.price')[0].innerText);
+                }
+                //console.log(total);
+                tax = total * 0.1;
+                totalPrice = total + tax;
+
+                total_html.text(total);
+                tax_html.text(tax);
+                totalPrice_html.text(totalPrice);
+            })
+
+            
+        })
+        var addToArray = function ( id, dis) {
+            // console.log($(dis));
+            if ($(dis).is(":checked")) {
+                checked_elements.push(id);
+            }
+            else {
+                checked_elements.pop(id);
+            }
+            console.log(checked_elements);
+        }
+
+        var Delete = function () {
+            console.log("debug");
+            var shopping_list = [];
+            shopping_list = JSON.parse(localStorage.getItem("shopping_list"));
+            
+            shopping_list = shopping_list.filter(function (el) {
+                return !checked_elements.includes(el);
+            });
+            localStorage.setItem('shopping_list', JSON.stringify(shopping_list));
+            window.location.href = "/ShoppingCart/Index?List=" + shopping_list;
+            // Update local storage
+            //localStorage.setItem('shopping_list', JSON.stringify(shopping_list));
+
+        }
+
+    </script>
+}

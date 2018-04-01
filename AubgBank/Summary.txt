@@ -1,0 +1,8 @@
+This is a Bank Website. 
+
+The aim of the project was to set up a fullstack website,
+with authentication, interactive design, and a database. 
+
+Technologies Used: ASP.NET, C#, Jquery, Boostrap, CSS, HTML. 
+
+Author: Giouzakov Konstantinos
