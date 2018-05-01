@@ -1,0 +1,9 @@
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\bin\Debug\netstandard2.0\Nop.Plugin.Widgets.HomePageNewProductsPlugin.deps.json
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\bin\Debug\netstandard2.0\Nop.Plugin.Widgets.HomePageNewProductsPlugin.dll
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\bin\Debug\netstandard2.0\Nop.Plugin.Widgets.HomePageNewProductsPlugin.pdb
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\netstandard2.0\Nop.Plugin.Widgets.HomePageNewProductsPlugin.csprojResolveAssemblyReference.cache
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\netstandard2.0\Nop.Plugin.Widgets.HomePageNewProductsPlugin.csproj.CoreCompileInputs.cache
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\netstandard2.0\Nop.Plugin.Widgets.HomePageNewProductsPlugin.AssemblyInfoInputs.cache
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\netstandard2.0\Nop.Plugin.Widgets.HomePageNewProductsPlugin.AssemblyInfo.cs
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\netstandard2.0\Nop.Plugin.Widgets.HomePageNewProductsPlugin.dll
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\netstandard2.0\Nop.Plugin.Widgets.HomePageNewProductsPlugin.pdb

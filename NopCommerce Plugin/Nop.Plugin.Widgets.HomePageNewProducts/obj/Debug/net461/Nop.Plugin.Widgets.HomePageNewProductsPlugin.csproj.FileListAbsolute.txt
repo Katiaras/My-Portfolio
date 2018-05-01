@@ -1,0 +1,14 @@
+C:\Users\Katiaras15\Desktop\Preliminary Task\Presentation\Nop.Web\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\plugin.json
+C:\Users\Katiaras15\Desktop\Preliminary Task\Presentation\Nop.Web\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\Nop.Plugin.Widgets.HomePageNewProductsPlugin.dll
+C:\Users\Katiaras15\Desktop\Preliminary Task\Presentation\Nop.Web\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\Nop.Plugin.Widgets.HomePageNewProductsPlugin.pdb
+C:\Users\Katiaras15\Desktop\Preliminary Task\Presentation\Nop.Web\Plugins\Widgets.HomePageNewProductsPlugin\Views\Configure.cshtml
+C:\Users\Katiaras15\Desktop\Preliminary Task\Presentation\Nop.Web\Plugins\Widgets.HomePageNewProductsPlugin\Views\_ViewImports.cshtml
+C:\Users\Katiaras15\Desktop\Preliminary Task\Presentation\Nop.Web\Plugins\Widgets.HomePageNewProductsPlugin\plugin.json
+C:\Users\Katiaras15\Desktop\Preliminary Task\Presentation\Nop.Web\Plugins\Widgets.HomePageNewProductsPlugin\Nop.Plugin.Widgets.HomePageNewProductsPlugin.dll
+C:\Users\Katiaras15\Desktop\Preliminary Task\Presentation\Nop.Web\Plugins\Widgets.HomePageNewProductsPlugin\Nop.Plugin.Widgets.HomePageNewProductsPlugin.pdb
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\net461\Nop.Plugin.Widgets.HomePageNewProductsPlugin.csprojResolveAssemblyReference.cache
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\net461\Nop.Plugin.Widgets.HomePageNewProductsPlugin.csproj.CoreCompileInputs.cache
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\net461\Nop.Plugin.Widgets.HomePageNewProductsPlugin.AssemblyInfoInputs.cache
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\net461\Nop.Plugin.Widgets.HomePageNewProductsPlugin.AssemblyInfo.cs
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\net461\Nop.Plugin.Widgets.HomePageNewProductsPlugin.dll
+C:\Users\Katiaras15\Desktop\Preliminary Task\Plugins\Nop.Plugin.Widgets.HomePageNewProductsPlugin\obj\Debug\net461\Nop.Plugin.Widgets.HomePageNewProductsPlugin.pdb

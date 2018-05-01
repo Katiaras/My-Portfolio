@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Homepage New Products",
+  "SystemName": "Widgets.HomePageNewProducts",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.00" ],
+  "Author": "Giouzakov Konstantinos",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.HomePageNewProducts.dll",
+  "Description": "This Plugin allows showing the newest products on the Homepage."
+}
